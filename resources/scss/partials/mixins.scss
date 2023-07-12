@@ -1,0 +1,9 @@
+@mixin myFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin myFlexPosition {
+    align-items: center;
+    height: 100%;
+}
