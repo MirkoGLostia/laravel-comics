@@ -6,14 +6,15 @@
 
         <nav>
         <ul>
-            {{-- <li v-for="link in links" :key="link.id">
-            <a :class="link.current ? 'active' : ''" :href="link.url">{{ link.text }}</a>
-            </li> --}}
 
             @foreach ($links as $link)
 
             <li>
-                <a href="{{ $link['url'] }}">{{ $link['text'] }}</a>
+                <a @class([
+                    'active' => $link['current']
+                ]) href="{{ $link['url'] }}">
+                    {{ $link['text'] }}
+                </a>
             </li>
                 
             @endforeach
